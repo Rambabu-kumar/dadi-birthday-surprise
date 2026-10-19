@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff6f5">
+    <meta name="description" content="A little birthday surprise for Sandhiya, lovingly called Dadi Ji.">
+    <title>Happy Birthday, Dadi Ji! 💗</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="welcome-screen" id="welcome-screen" aria-labelledby="welcome-title">
+      <div class="welcome-stars" aria-hidden="true">✦　·　♡　·　✦</div>
+      <p class="eyebrow">A LITTLE SOMETHING, JUST FOR YOU</p>
+      <h1 id="welcome-title">Hey Dadi Ji! <span>💗</span></h1>
+      <p class="welcome-copy">Someone special has a little surprise for you…</p>
+      <div class="gift" id="gift" aria-hidden="true">
+        <span class="gift-bow">♡</span>
+        <span class="gift-lid"></span>
+        <span class="gift-box"></span>
+      </div>
+      <button class="button button-primary open-surprise" id="open-surprise" type="button">
+        Open Your Surprise <span aria-hidden="true">🎁</span>
+      </button>
+      <p class="welcome-signoff">made with lots of love &amp; friendship</p>
+    </div>
+
+    <main id="birthday-page" aria-hidden="true" inert>
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="Dadi Ji's birthday page">for my Dadi Ji <span>♡</span></a>
+        <button class="music-toggle" id="music-toggle" type="button" aria-pressed="false">Play Tune ♫</button>
+        <a class="header-note" href="#letter">a little birthday love ↓</a>
+      </header>
+
+      <section class="hero section-wrap" id="top" aria-labelledby="hero-title" tabindex="-1">
+        <div class="fairy-lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="hero-copy">
+          <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+          <h1 id="hero-title">Happy Birthday,<br><span>Sandhiya!</span> <span class="hero-cake-emoji" aria-hidden="true">🎂</span></h1>
+          <p class="hero-bestie">My Favourite Dadi Ji <span aria-hidden="true">❤️</span></p>
+          <p class="hero-subtitle">Aaj ka din sirf tumhare naam, Dadi Ji! 🥹💗</p>
+          <a class="button button-primary" href="#memories">Let's Relive Our Memories <span aria-hidden="true">📸</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="hero-heart heart-one">♡</span>
+          <span class="hero-heart heart-two">♥</span>
+          <span class="hero-sparkle sparkle-one">✦</span>
+          <span class="hero-sparkle sparkle-two">✧</span>
+          <div class="cake-illustration">
+            <div class="cake-candles"><i></i><i></i><i></i></div>
+            <div class="cake-flames"><b></b><b></b><b></b></div>
+            <div class="cake-top"></div>
+            <div class="cake-layer cake-layer-top"><span>♡　♡　♡</span></div>
+            <div class="cake-layer cake-layer-bottom"></div>
+            <div class="cake-plate"></div>
+          </div>
+          <div class="hero-art-caption">a whole day of smiles ✨</div>
+        </div>
+        <a class="scroll-cue" href="#memories" aria-label="Scroll to memories">↓</a>
+      </section>
+
+      <section class="memories section-wrap section-pad" id="memories" aria-labelledby="memories-title">
+        <div class="section-heading">
+          <p class="eyebrow">OUR LITTLE TIME CAPSULE</p>
+          <h2 id="memories-title">The best kind of <span>memories</span></h2>
+          <p>A tiny scrapbook of moments, smiles, and all the little things worth keeping. 💗</p>
+        </div>
+        <div class="photo-grid" id="photo-grid" aria-label="A gallery of our memories"></div>
+        <p class="gallery-note"><span aria-hidden="true">✿</span> Add your photos to <code>assets/images/</code> to bring these memories to life.</p>
+      </section>
+
+      <section class="reasons-section section-pad" aria-labelledby="reasons-title">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <p class="eyebrow">A FEW THINGS I LOVE ABOUT OUR FRIENDSHIP</p>
+            <h2 id="reasons-title">Reasons you're <span>so special</span></h2>
+            <p>Tap a card for a little birthday sparkle ✨</p>
+          </div>
+          <div class="reasons-grid">
+            <button class="reason-card" type="button"><span>😊</span><b>Your beautiful smile</b><i>the best kind of sunshine</i></button>
+            <button class="reason-card" type="button"><span>💗</span><b>Your unique personality</b><i>one of a kind, always</i></button>
+            <button class="reason-card" type="button"><span>😂</span><b>Our crazy conversations</b><i>never a dull moment</i></button>
+            <button class="reason-card" type="button"><span>📸</span><b>The memories we share</b><i>little moments, big smiles</i></button>
+            <button class="reason-card" type="button"><span>🫶🏻</span><b>Your special place in my life</b><i>my favourite Dadi Ji</i></button>
+            <button class="reason-card" type="button"><span>✨</span><b>The happiness you bring</b><i>you make ordinary days better</i></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="letter-section section-pad" id="letter" aria-labelledby="letter-title">
+        <div class="letter-card">
+          <span class="letter-stamp" aria-hidden="true">♡</span>
+          <p class="eyebrow">A NOTE, JUST FOR YOU</p>
+          <h2 id="letter-title">A little letter <span>💌</span></h2>
+          <p class="letter-intro">Some things are best said from the heart.</p>
+          <button class="button button-outline" id="open-letter" type="button" aria-expanded="false" aria-controls="birthday-letter">Open My Letter 💌</button>
+          <div class="letter-message" id="birthday-letter" hidden></div>
+          <div class="letter-flower" aria-hidden="true">✿</div>
+        </div>
+      </section>
+
+      <section class="wish-section section-wrap section-pad" aria-labelledby="wish-title">
+        <div class="wish-copy">
+          <p class="eyebrow">MAKE A LITTLE WISH</p>
+          <h2 id="wish-title">Make a Birthday <span>Wish! ✨</span></h2>
+          <p>Close your eyes, think of something lovely, and tap to blow out the candles. 🕯️</p>
+          <button class="button button-primary" id="blow-candles" type="button">Blow the Candles 🕯️</button>
+          <p class="wish-reveal" id="wish-reveal" aria-live="polite" hidden>May all your beautiful wishes come true! 💗</p>
+        </div>
+        <div class="wish-cake-wrap" aria-label="Birthday cake with three candles">
+          <div class="wish-cake" aria-hidden="true">
+            <div class="wish-flames"><i></i><i></i><i></i></div>
+            <div class="wish-candle candle-a"></div><div class="wish-candle candle-b"></div><div class="wish-candle candle-c"></div>
+            <div class="wish-icing"></div><div class="wish-layer wish-layer-top"></div><div class="wish-layer wish-layer-bottom"></div><div class="wish-plate"></div>
+          </div>
+          <span class="wish-doodle doodle-a" aria-hidden="true">✦</span><span class="wish-doodle doodle-b" aria-hidden="true">♡</span>
+        </div>
+      </section>
+
+      <section class="quiz-section section-pad" aria-labelledby="quiz-title">
+        <div class="quiz-card">
+          <p class="eyebrow">NO PRESSURE, JUST FUN</p>
+          <h2 id="quiz-title">Dadi Ji, Ek Chhota Sa <span>Challenge! 😎</span></h2>
+          <div class="quiz-content" id="quiz-content">
+            <p class="quiz-progress" id="quiz-progress" aria-live="polite"></p>
+            <p class="quiz-question" id="quiz-question"></p>
+            <div class="quiz-options" id="quiz-options"></div>
+            <p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p>
+          </div>
+          <div class="quiz-complete" id="quiz-complete" hidden>
+            <span aria-hidden="true">🎉🥳💗</span>
+            <p>Challenge complete! Your mission: smile, enjoy your day, and save me a slice of cake! 🎂</p>
+            <button class="text-button" id="quiz-again" type="button">Play again ↻</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-section section-pad" aria-labelledby="final-title">
+        <div class="final-card">
+          <div class="final-hearts" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span></div>
+          <p class="eyebrow">ONE LAST THING...</p>
+          <h2 id="final-title">Dear Dadi Ji,<br><span>Stay Happy Always!</span> 💗</h2>
+          <p class="final-copy">May your smile never fade, your dreams keep growing, and your life stay full of beautiful moments. ✨</p>
+          <button class="button button-primary" id="birthday-cheer" type="button" aria-expanded="false" aria-controls="cheer-reveal">A Little Birthday Cheer ✨</button>
+          <div class="cheer-reveal" id="cheer-reveal" aria-live="polite" hidden>
+            <span aria-hidden="true">🎂✨</span>
+            <p>Keep smiling, Dadi Ji! Wishing you a day full of laughter, cake, and happy memories. 🎂💗</p>
+          </div>
+          <p class="signature">Made with lots of care by Rambabu <span>❤️</span></p>
+        </div>
+      </section>
+
+      <footer class="site-footer">A little scrapbook made just for you, Dadi Ji <span aria-hidden="true">♡</span></footer>
+    </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Memory photo viewer" hidden>
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close photo viewer">×</button>
+      <button class="lightbox-arrow lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous photo">‹</button>
+      <figure class="lightbox-figure">
+        <div class="lightbox-image-wrap" id="lightbox-image-wrap"></div>
+        <figcaption id="lightbox-caption"></figcaption>
+        <p class="lightbox-counter" id="lightbox-counter"></p>
+      </figure>
+      <button class="lightbox-arrow lightbox-next" id="lightbox-next" type="button" aria-label="Next photo">›</button>
+    </div>
+    <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+  </body>
+</html>
