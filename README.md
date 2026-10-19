@@ -19,7 +19,7 @@ dadi (9).jpeg
 dadi (10).jpeg
 ```
 
-Replace a photo in that folder while keeping its filename to update a memory. Images are lazy-loaded and cropped into the scrapbook frames; the lightbox displays the full photo.
+Replace a photo in that folder while keeping its filename to update a memory. Images are lazy-loaded and displayed in their original proportions inside the scrapbook frames, so portrait and landscape pictures fit without being cropped; the lightbox displays the full photo.
 
 ## Personalize the page
 

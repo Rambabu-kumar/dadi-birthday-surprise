@@ -102,9 +102,9 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-
 .photo-card { position: relative; min-width: 0; padding: .62rem .62rem .9rem; border: 0; border-radius: 3px; background: var(--white); box-shadow: 0 9px 24px rgb(88 58 71 / 12%); cursor: pointer; text-align: left; transition: transform .25s ease, box-shadow .25s ease; }
 .photo-card:nth-child(3n+1) { transform: rotate(-2deg); }.photo-card:nth-child(3n+2) { transform: rotate(1.7deg); }.photo-card:nth-child(3n) { transform: rotate(-.6deg); }
 .photo-card:hover, .photo-card:focus-visible { z-index: 1; transform: translateY(-6px) rotate(0); box-shadow: 0 16px 30px rgb(88 58 71 / 18%); }
-.photo-frame { position: relative; display: grid; aspect-ratio: 4 / 4.2; place-items: center; overflow: hidden; background: linear-gradient(145deg, #f7e5e7, #eee7f5); }
-.photo-frame img { width: 100%; height: 100%; object-fit: cover; }
-.photo-fallback { display: grid; width: 100%; height: 100%; place-content: center; justify-items: center; padding: .8rem; color: var(--rose-dark); text-align: center; }
+.photo-frame { position: relative; overflow: hidden; background: linear-gradient(145deg, #f7e5e7, #eee7f5); }
+.photo-frame img { display: block; width: 100%; height: auto; object-fit: contain; }
+.photo-fallback { display: grid; width: 100%; min-height: 10rem; place-content: center; justify-items: center; padding: .8rem; color: var(--rose-dark); text-align: center; }
 .photo-fallback span { margin-bottom: .35rem; font-size: 2rem; }
 .photo-fallback small { font-size: .65rem; line-height: 1.4; overflow-wrap: anywhere; }
 .photo-caption { display: block; padding-top: .7rem; color: #60515a; font: italic 1rem/1.25 var(--handwriting); text-align: center; }
