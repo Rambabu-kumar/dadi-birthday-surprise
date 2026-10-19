@@ -40,7 +40,29 @@ let quizLocked = false;
 let birthdayAudioContext;
 let birthdayTuneTimer;
 let birthdayTuneIndex = 0;
+let currentJourneyStep = 0;
 const birthdayTune = [523.25, 659.25, 783.99, 659.25, 698.46, 783.99, 1046.5, 783.99, 659.25, 587.33, 523.25, 659.25];
+const journeySections = $$(".journey-step");
+
+function revealJourneyStep(sectionId) {
+  const nextStep = journeySections.findIndex((section) => section.id === sectionId);
+  if (nextStep !== currentJourneyStep + 1) return;
+
+  currentJourneyStep = nextStep;
+  journeySections.forEach((section, index) => {
+    section.hidden = index !== currentJourneyStep;
+  });
+
+  if (sectionId === "final") $(".site-footer").hidden = false;
+
+  const section = journeySections[currentJourneyStep];
+  const heading = $("h1, h2", section);
+  heading?.focus({ preventScroll: true });
+  section.scrollIntoView({
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    block: "start"
+  });
+}
 
 function makePhotoFallback(path) {
   const fallback = document.createElement("span");
@@ -180,6 +202,10 @@ function renderQuiz() {
 renderGallery();
 renderQuiz();
 
+$$("[data-next-step]").forEach((button) => {
+  button.addEventListener("click", () => revealJourneyStep(button.dataset.nextStep));
+});
+
 $("#open-surprise").addEventListener("click", () => {
   $("#gift").classList.add("opened");
   $("#open-surprise").disabled = true;
@@ -191,7 +217,7 @@ $("#open-surprise").addEventListener("click", () => {
     $("#birthday-page").classList.add("is-visible");
     window.setTimeout(() => {
       $("#welcome-screen").hidden = true;
-      $("#top").focus({ preventScroll: true });
+      $("#hero-title").focus({ preventScroll: true });
     }, 750);
   }, 550);
 });
@@ -204,11 +230,12 @@ $("#open-letter").addEventListener("click", (event) => {
   message.hidden = !opening;
   button.setAttribute("aria-expanded", String(opening));
   button.textContent = opening ? "Close My Letter 💌" : "Open My Letter 💌";
+  $("#letter-next").hidden = !opening;
   if (opening) celebrate(18);
 });
 
 $$(".reason-card").forEach((card) => {
-  card.addEventListener("click", () => card.classList.toggle("is-loved"));
+  card.addEventListener("click", () => card.classList.toggle("is-highlighted"));
 });
 
 $("#blow-candles").addEventListener("click", (event) => {
@@ -218,6 +245,7 @@ $("#blow-candles").addEventListener("click", (event) => {
   $(".wish-cake").classList.add("is-blown");
   $("#wish-reveal").hidden = false;
   button.textContent = "Wish Made! ✨";
+  $("#wish-next").hidden = false;
   celebrate(48);
 });
 
@@ -225,6 +253,7 @@ $("#quiz-again").addEventListener("click", () => {
   quizIndex = 0;
   $("#quiz-content").hidden = false;
   $("#quiz-complete").hidden = true;
+  $("#quiz-next").hidden = true;
   renderQuiz();
 });
 

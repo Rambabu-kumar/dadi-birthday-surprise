@@ -1,6 +1,6 @@
 # Sandhiya's Birthday Surprise 🎂💗
 
-A lightweight, mobile-first birthday scrapbook made with HTML, CSS, and vanilla JavaScript. No build step, account, or backend is required.
+A lightweight, mobile-first birthday scrapbook made with HTML, CSS, and vanilla JavaScript. Each of the seven surprise sections opens with its own button, so Sandhiya can explore the page one step at a time. No build step, account, or backend is required.
 
 ## Add your photographs
 
@@ -34,7 +34,7 @@ Replace a photo in that folder while keeping its filename to update a memory. Im
 1. Open this folder in VS Code.
 2. Add the photographs to `assets/images/`.
 3. Open `index.html` in a browser. For convenient live reload, you can use the VS Code **Live Server** extension, then choose **Open with Live Server** from the file's context menu.
-4. Test the surprise button, memory lightbox (including Escape and arrow keys), birthday letter, candle button, quiz, birthday cheer button, and music toggle. Check at 360px, 390px, 430px, and desktop widths using browser responsive design mode.
+4. Test each section's **Next** button, memory lightbox (including Escape and arrow keys), birthday letter, candle button, quiz, birthday cheer button, and music toggle. Later surprises stay hidden until the previous section's button is pressed. Check at 360px, 390px, 430px, and desktop widths using browser responsive design mode.
 
 The site is static and can also be previewed by opening `index.html` directly. A local HTTP server is recommended for a closer match to deployment behavior.
 
